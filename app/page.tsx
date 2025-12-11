@@ -1,8 +1,42 @@
-import { Github, Play, ArrowRight, Network, Brain, Database, Cpu, Shield, Zap, Mail, ExternalLink } from 'lucide-react';
+import { Github, Play, ArrowRight, Network, Brain, Database, Cpu, Shield, Zap, Mail, ExternalLink, BookOpen } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Home() {
   return (
     <main className="min-h-screen">
+      {/* Navigation */}
+      <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-border">
+        <div className="max-w-6xl mx-auto px-6 py-4">
+          <div className="flex items-center justify-between">
+            <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+              <img
+                src="/trinity-logo.svg"
+                alt="Trinity Logo"
+                className="w-8 h-8"
+              />
+              <span className="text-xl font-bold text-secondary">TRINITY</span>
+            </Link>
+            <div className="flex items-center gap-6">
+              <Link
+                href="/how-it-works"
+                className="text-text-light hover:text-secondary transition-colors font-medium"
+              >
+                How It Works
+              </Link>
+              <a
+                href="https://github.com/abilityai/trinity"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary inline-flex items-center gap-2 text-sm py-2"
+              >
+                <Github className="w-4 h-4" />
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         {/* Header gradient overlay */}
@@ -225,26 +259,20 @@ export default function Home() {
                 <ExternalLink className="w-4 h-4" />
                 Documentation
               </a>
-              <a
-                href="mailto:eugene@ability.ai"
+              <Link
+                href="/how-it-works"
                 className="text-secondary-light hover:text-white transition-colors inline-flex items-center gap-2"
               >
-                <Mail className="w-4 h-4" />
-                Contact
-              </a>
+                <BookOpen className="w-4 h-4" />
+                How It Works
+              </Link>
             </div>
 
             {/* Right - Contact */}
             <div>
               <h3 className="font-semibold mb-4">Get in Touch</h3>
               <p className="text-secondary-light mb-1">Eugene Vyborov</p>
-              <p className="text-secondary-light text-sm mb-4">Founder & CEO</p>
-              <a
-                href="mailto:eugene@ability.ai"
-                className="text-white hover:text-primary-light transition-colors"
-              >
-                eugene@ability.ai
-              </a>
+              <p className="text-secondary-light text-sm">Founder & CEO</p>
             </div>
           </div>
 
