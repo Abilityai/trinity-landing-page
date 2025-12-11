@@ -25,7 +25,7 @@ export default function Home() {
               Deep Agent Orchestration Platform
             </h1>
             <p className="text-xl md:text-2xl text-text-light mb-12 font-medium">
-              Deep Agents are ready. Deep Agent infrastructure isn&apos;t.
+              Orchestrate Claude Code agents running in YOLO mode in Docker containers.
             </p>
 
             {/* CTA Buttons */}
@@ -61,25 +61,16 @@ export default function Home() {
             5-minute overview of what Trinity does and why it matters.
           </p>
 
-          {/* Video Embed Placeholder */}
+          {/* YouTube Video Embed */}
           <div className="relative aspect-video bg-secondary-light rounded-xl overflow-hidden shadow-lg">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-center">
-                <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4 cursor-pointer hover:bg-primary/20 transition-colors">
-                  <Play className="w-10 h-10 text-primary ml-1" />
-                </div>
-                <p className="text-text-light">Video coming soon</p>
-              </div>
-            </div>
-            {/* Replace with actual YouTube embed when ready */}
-            {/* <iframe
+            <iframe
               className="w-full h-full"
-              src="https://www.youtube.com/embed/VIDEO_ID"
+              src="https://www.youtube.com/embed/tZ4TN9ySMBE"
               title="Trinity Overview"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
-            /> */}
+            />
           </div>
         </div>
       </section>
@@ -143,12 +134,10 @@ export default function Home() {
 
           <div className="text-center mt-10">
             <a
-              href="https://github.com/abilityai/trinity#architecture"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/how-it-works"
               className="inline-flex items-center gap-2 text-secondary font-medium hover:text-primary transition-colors"
             >
-              Learn more about the architecture
+              Learn more about how it works
               <ArrowRight className="w-4 h-4" />
             </a>
           </div>
