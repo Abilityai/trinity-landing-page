@@ -42,17 +42,7 @@ export default function Home() {
         {/* Header gradient overlay */}
         <div className="absolute inset-x-0 top-0 h-96 bg-[radial-gradient(ellipse_48.43%_48.43%_at_50%_8.02%,rgba(255,0,0,0.16)_0%,rgba(255,0,0,0)_100%)]" />
 
-        <div className="relative max-w-6xl mx-auto px-6 pt-16 pb-24">
-          {/* Logo and Brand */}
-          <div className="flex items-center justify-center gap-4 mb-16">
-            <img
-              src="/trinity-logo.svg"
-              alt="Trinity Logo"
-              className="w-16 h-16"
-            />
-            <span className="text-4xl font-bold tracking-tight text-secondary">TRINITY</span>
-          </div>
-
+        <div className="relative max-w-6xl mx-auto px-6 pt-24 pb-24">
           {/* Hero Content */}
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-6xl font-bold text-secondary mb-6 leading-tight">
