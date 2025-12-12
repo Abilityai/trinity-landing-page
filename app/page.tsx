@@ -151,13 +151,15 @@ export default function Home() {
                 View on GitHub
               </motion.a>
               <motion.a
-                href="#contact"
+                href="https://docs.google.com/forms/d/e/1FAIpQLScv4An1NwqmYTmZU-iC7ibCGTiyukKJIYTi3Uxc8H9zR0ED4g/viewform?usp=dialog"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-secondary inline-flex items-center justify-center gap-2"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <Play className="w-5 h-5" />
-                Request Demo
+                Join Waitlist
               </motion.a>
             </motion.div>
           </div>
