@@ -70,10 +70,10 @@ export default function Home() {
               />
               <span className="text-xl font-bold text-secondary">TRINITY</span>
             </Link>
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-2 sm:gap-6">
               <Link
                 href="/how-it-works"
-                className="text-text-light hover:text-secondary transition-colors font-medium"
+                className="text-text-light hover:text-secondary transition-colors font-medium text-sm sm:text-base whitespace-nowrap"
               >
                 How It Works
               </Link>
@@ -81,12 +81,12 @@ export default function Home() {
                 href="https://github.com/abilityai/trinity"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary inline-flex items-center gap-2 text-sm py-2"
+                className="btn-primary inline-flex items-center gap-1 sm:gap-2 text-xs sm:text-sm py-2 px-3 sm:px-6"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <Github className="w-4 h-4" />
-                GitHub
+                <span className="hidden sm:inline">GitHub</span>
               </motion.a>
             </div>
           </div>
@@ -159,7 +159,7 @@ export default function Home() {
                 whileTap={{ scale: 0.95 }}
               >
                 <Play className="w-5 h-5" />
-                Join Waitlist
+                Request a Demo
               </motion.a>
             </motion.div>
           </div>
