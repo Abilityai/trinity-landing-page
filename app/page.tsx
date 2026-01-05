@@ -43,10 +43,10 @@ export default function Home() {
   const heroScale = useTransform(scrollYProgress, [0, 0.5], [1, 0.95]);
 
   const pillars = [
-    { icon: Network, title: "Planning", desc: "Task DAGs that persist and recover outside the context window" },
-    { icon: Cpu, title: "Delegation", desc: "Orchestrator-Worker pattern with permission boundaries" },
-    { icon: Database, title: "Memory", desc: "State that survives across sessions with memory folding" },
-    { icon: Brain, title: "Context", desc: "Structured reasoning through High-Order Prompts" }
+    { icon: Shield, title: "Sovereign", desc: "Your infrastructure, your data, your roadmap. No vendor lock-in." },
+    { icon: Zap, title: "Fast", desc: "Go from local agent to autonomous system in minutes, not months." },
+    { icon: Network, title: "Collaborative", desc: "Agents discover each other, delegate tasks, share results automatically." },
+    { icon: Database, title: "Persistent", desc: "Every state saved to GitHub. Roll back anytime. Nothing lost." }
   ];
 
   return (
@@ -121,7 +121,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              Deep Agent Orchestration Platform
+              Sovereign Infrastructure for Autonomous AI Agents
             </motion.h1>
             <motion.p
               className="text-xl md:text-2xl text-text-light mb-12 font-medium"
@@ -129,7 +129,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
             >
-              Orchestrate Claude Code agents running in YOLO mode in Docker containers.
+              Deploy collaborating agents on your infrastructure. Full observability. State that never dies. Minutes to production.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -248,14 +248,14 @@ export default function Home() {
               className="text-3xl md:text-4xl font-bold text-secondary text-center mb-4"
               variants={fadeInUp}
             >
-              The Four Pillars of Deep Agency
+              Why Sovereign Agent Infrastructure?
             </motion.h2>
             <motion.p
               className="text-text-light text-center mb-12 max-w-2xl mx-auto"
               variants={fadeInUp}
             >
-              Unlike reactive chatbots, Deep Agents operate with deliberative reasoning:
-              they decompose goals, persist memory, delegate tasks, and recover autonomously.
+              Stop waiting for SaaS vendors. Stop building from scratch.
+              Deploy intelligent, collaborating agents you fully control.
             </motion.p>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -299,7 +299,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Sovereign Section */}
+      {/* Observability Section */}
       <section className="py-20 bg-white/50 overflow-hidden">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div
@@ -314,20 +314,21 @@ export default function Home() {
               whileHover={{ rotate: 360 }}
               transition={{ duration: 0.8 }}
             >
-              <Shield className="w-8 h-8 text-primary" />
+              <Brain className="w-8 h-8 text-primary" />
             </motion.div>
             <motion.h2
               className="text-3xl md:text-4xl font-bold text-secondary mb-6"
               variants={fadeInUp}
             >
-              Your Infrastructure. Your Control.
+              See Everything. Control Everything.
             </motion.h2>
             <motion.p
               className="text-xl text-text-light leading-relaxed max-w-3xl mx-auto"
               variants={fadeInUp}
             >
-              Sovereign deployment means security plus agility. No vendor lock-in.
-              No data leaving your perimeter. Adapt your agent strategy tonight, not next quarter.
+              Real-time dashboard shows what agents are doing and how they collaborate.
+              Replay timeline lets you scrub through history. Talk to any agent via web terminal.
+              Centralized credentials. Per-agent resource limits. Full audit trail.
             </motion.p>
           </motion.div>
         </div>
@@ -360,14 +361,14 @@ export default function Home() {
               className="text-3xl md:text-4xl font-bold text-secondary mb-6"
               variants={fadeInUp}
             >
-              Open Source. Production Ready.
+              Open Source. Deploy in Minutes.
             </motion.h2>
             <motion.p
               className="text-xl text-text-light leading-relaxed mb-10 max-w-3xl mx-auto"
               variants={fadeInUp}
             >
-              Trinity is free and open source. Deploy in 60 seconds with Docker.
-              Enterprise features available for teams that need more.
+              Trinity is free and open source. One command to deploy.
+              MCP server for agent collaboration. GitHub sync for state. Everything you need to run autonomous agents at scale.
             </motion.p>
             <motion.a
               href="https://github.com/abilityai/trinity"

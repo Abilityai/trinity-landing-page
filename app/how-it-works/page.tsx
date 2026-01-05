@@ -74,8 +74,8 @@ export default function HowItWorks() {
               How Trinity Works
             </h1>
             <p className="text-xl text-text-light mb-8 max-w-3xl mx-auto">
-              Orchestrate Claude Code agents running in YOLO mode in Docker containers.
-              Full autonomy. Complete visibility. Your infrastructure.
+              Deploy autonomous AI agents on your infrastructure in minutes.
+              Agents collaborate, state persists to GitHub, you control everything.
             </p>
           </div>
         </div>
@@ -89,20 +89,20 @@ export default function HowItWorks() {
               What is Trinity?
             </h2>
             <p className="text-lg text-text-light mb-8 leading-relaxed">
-              Trinity is a Deep Agent Orchestration Platform that runs Claude Code agents in fully autonomous
-              &quot;YOLO mode&quot; inside Docker containers. Each agent operates with complete CLI access, can execute
-              any command, write code, browse the web, and interact with external systems—all while you
-              maintain full visibility and control.
+              Trinity is sovereign infrastructure for autonomous AI agents. Deploy Claude Code agents in isolated
+              Docker containers, let them discover and collaborate with each other via MCP, persist all state to
+              GitHub, and monitor everything through a real-time dashboard. Go from local agent to production
+              autonomous system in minutes.
             </p>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
               {[
-                { icon: Terminal, text: "Claude Code in YOLO mode (full autonomy)" },
-                { icon: Container, text: "Each agent in its own Docker container" },
-                { icon: Network, text: "MCP-based inter-agent communication" },
-                { icon: Database, text: "Database-backed persistence" },
-                { icon: Eye, text: "Real-time observability dashboard" },
-                { icon: Shield, text: "Your infrastructure, your control" },
+                { icon: Terminal, text: "Web terminal + SSH access to any agent" },
+                { icon: Container, text: "Isolated Docker container per agent" },
+                { icon: Network, text: "Agents discover and collaborate via MCP" },
+                { icon: Database, text: "State persists to GitHub - nothing lost" },
+                { icon: Eye, text: "Full observability with replay timeline" },
+                { icon: Shield, text: "Your infrastructure, your roadmap" },
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3 p-4 bg-white rounded-lg border border-border">
                   <item.icon className="w-5 h-5 text-primary flex-shrink-0" />
@@ -114,22 +114,21 @@ export default function HowItWorks() {
         </div>
       </section>
 
-      {/* Four Pillars Expanded */}
+      {/* Core Capabilities */}
       <section className="py-20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-4">
-              The Four Pillars of Deep Agency
+              Core Capabilities
             </h2>
             <p className="text-lg text-text-light max-w-3xl mx-auto">
-              Unlike reactive chatbots that respond to single prompts, Deep Agents operate with
-              deliberative reasoning. They decompose goals into task graphs, delegate to specialists,
-              persist memory across sessions, and recover from failures autonomously.
+              Trinity implements the infrastructure required for truly autonomous AI systems.
+              Agents that plan, collaborate, remember, and operate continuously—all under your control.
             </p>
           </div>
 
           <div className="space-y-12">
-            {/* Pillar I */}
+            {/* Capability 1: Collaboration */}
             <div className="card">
               <div className="flex items-start gap-6">
                 <div className="w-16 h-16 rounded-xl bg-primary-light flex items-center justify-center flex-shrink-0">
@@ -137,20 +136,19 @@ export default function HowItWorks() {
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-3">
-                    <span className="text-xs font-bold text-primary bg-primary-light px-2 py-1 rounded">PILLAR I</span>
-                    <h3 className="text-xl font-bold text-secondary">Explicit Planning</h3>
+                    <h3 className="text-xl font-bold text-secondary">Agents That Collaborate</h3>
                   </div>
                   <p className="text-text-light mb-6">
-                    Agents maintain living task DAGs (Directed Acyclic Graphs) that persist outside the context window.
-                    Before taking any action, agents consult and update their workplan.
+                    Agents discover each other through MCP, delegate tasks, and share results automatically.
+                    Build workflows where specialists work together without custom orchestration code.
                   </p>
 
                   <div className="grid md:grid-cols-2 gap-4">
                     {[
-                      { title: "Workplan System", desc: "Task graphs with dependencies, status tracking (pending, active, completed, failed)" },
-                      { title: "Automatic Injection", desc: "Workplans are injected into agent context on every start" },
-                      { title: "Progress Tracking", desc: "Real-time visibility into task completion" },
-                      { title: "Recovery", desc: "Failed tasks trigger replanning, not blind retry" },
+                      { title: "MCP Server", desc: "21 tools for agent discovery, communication, and coordination" },
+                      { title: "Permission Controls", desc: "Fine-grained control over which agents can talk to each other" },
+                      { title: "Parallel Execution", desc: "Spawn tasks across multiple agents simultaneously" },
+                      { title: "Agent Discovery", desc: "Agents find each other's capabilities programmatically" },
                     ].map((item, i) => (
                       <div key={i} className="flex items-start gap-2">
                         <CheckCircle className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
@@ -165,43 +163,7 @@ export default function HowItWorks() {
               </div>
             </div>
 
-            {/* Pillar II */}
-            <div className="card">
-              <div className="flex items-start gap-6">
-                <div className="w-16 h-16 rounded-xl bg-primary-light flex items-center justify-center flex-shrink-0">
-                  <Cpu className="w-8 h-8 text-primary" />
-                </div>
-                <div className="flex-1">
-                  <div className="flex items-center gap-3 mb-3">
-                    <span className="text-xs font-bold text-primary bg-primary-light px-2 py-1 rounded">PILLAR II</span>
-                    <h3 className="text-xl font-bold text-secondary">Hierarchical Delegation</h3>
-                  </div>
-                  <p className="text-text-light mb-6">
-                    Complex tasks are decomposed and delegated to specialized sub-agents. Each sub-agent operates
-                    in isolation, preventing context pollution.
-                  </p>
-
-                  <div className="grid md:grid-cols-2 gap-4">
-                    {[
-                      { title: "MCP Communication", desc: "Agents discover and call each other through Model Context Protocol" },
-                      { title: "Permission Controls", desc: "Fine-grained control over which agents can communicate" },
-                      { title: "Context Quarantine", desc: "Sub-agents start fresh, return compressed summaries" },
-                      { title: "Orchestrator-Worker", desc: "Top-level orchestrator coordinates, workers execute" },
-                    ].map((item, i) => (
-                      <div key={i} className="flex items-start gap-2">
-                        <CheckCircle className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
-                        <div>
-                          <span className="font-medium text-secondary">{item.title}:</span>
-                          <span className="text-text-light text-sm"> {item.desc}</span>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Pillar III */}
+            {/* Capability 2: State Persistence */}
             <div className="card">
               <div className="flex items-start gap-6">
                 <div className="w-16 h-16 rounded-xl bg-primary-light flex items-center justify-center flex-shrink-0">
@@ -209,20 +171,19 @@ export default function HowItWorks() {
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-3">
-                    <span className="text-xs font-bold text-primary bg-primary-light px-2 py-1 rounded">PILLAR III</span>
-                    <h3 className="text-xl font-bold text-secondary">Persistent Memory</h3>
+                    <h3 className="text-xl font-bold text-secondary">State That Never Dies</h3>
                   </div>
                   <p className="text-text-light mb-6">
-                    Agents maintain memory that persists beyond the context window, enabling operations
-                    across days or weeks without losing context.
+                    Every conversation, file, and decision syncs to GitHub. Delete a container? State survives.
+                    Need to roll back? One command. This is the holy grail of agent state management.
                   </p>
 
                   <div className="grid md:grid-cols-2 gap-4">
                     {[
-                      { title: "Database-Backed History", desc: "Conversations survive container restarts and sessions" },
-                      { title: "File Browser", desc: "Browse and download agent workspace files" },
-                      { title: "Workspace Persistence", desc: "Agent workspaces persist across sessions" },
-                      { title: "Memory Folding", desc: "Periodic context summarization for infinite session lengths" },
+                      { title: "GitHub Sync", desc: "All agent state version-controlled automatically" },
+                      { title: "SQLite Persistence", desc: "Conversations survive container restarts" },
+                      { title: "Instant Rollback", desc: "Restore any agent to any previous state" },
+                      { title: "Full History", desc: "Complete audit trail of every decision" },
                     ].map((item, i) => (
                       <div key={i} className="flex items-start gap-2">
                         <CheckCircle className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
@@ -237,28 +198,62 @@ export default function HowItWorks() {
               </div>
             </div>
 
-            {/* Pillar IV */}
+            {/* Capability 3: Observability */}
             <div className="card">
               <div className="flex items-start gap-6">
                 <div className="w-16 h-16 rounded-xl bg-primary-light flex items-center justify-center flex-shrink-0">
-                  <Brain className="w-8 h-8 text-primary" />
+                  <Eye className="w-8 h-8 text-primary" />
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-3">
-                    <span className="text-xs font-bold text-primary bg-primary-light px-2 py-1 rounded">PILLAR IV</span>
-                    <h3 className="text-xl font-bold text-secondary">Extreme Context Engineering</h3>
+                    <h3 className="text-xl font-bold text-secondary">Complete Observability</h3>
                   </div>
                   <p className="text-text-light mb-6">
-                    Sophisticated instructions and observability ensure reliable, auditable reasoning
-                    with full visibility into agent behavior.
+                    See everything agents are doing in real-time. Replay timeline lets you scrub through
+                    history. Know exactly what happened, when, and why.
                   </p>
 
                   <div className="grid md:grid-cols-2 gap-4">
                     {[
-                      { title: "Template System", desc: "CLAUDE.md injection for consistent agent behavior" },
-                      { title: "Custom Metrics", desc: "6 types: counter, gauge, percentage, status, duration, bytes" },
-                      { title: "Trinity Meta-Prompts", desc: "Platform-injected instructions for workplan management" },
-                      { title: "Agent-Defined KPIs", desc: "Agents report their own key performance indicators" },
+                      { title: "Replay Timeline", desc: "Scrub through agent history with zoom controls" },
+                      { title: "Live Dashboard", desc: "Real-time view of agent activity and collaboration" },
+                      { title: "File Browser", desc: "Browse and download agent workspace files" },
+                      { title: "Execution Logs", desc: "Full transcript of every agent action" },
+                    ].map((item, i) => (
+                      <div key={i} className="flex items-start gap-2">
+                        <CheckCircle className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
+                        <div>
+                          <span className="font-medium text-secondary">{item.title}:</span>
+                          <span className="text-text-light text-sm"> {item.desc}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Capability 4: Control */}
+            <div className="card">
+              <div className="flex items-start gap-6">
+                <div className="w-16 h-16 rounded-xl bg-primary-light flex items-center justify-center flex-shrink-0">
+                  <Shield className="w-8 h-8 text-primary" />
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-center gap-3 mb-3">
+                    <h3 className="text-xl font-bold text-secondary">Full Autonomy, Full Control</h3>
+                  </div>
+                  <p className="text-text-light mb-6">
+                    Agents run in isolated containers with complete autonomy within boundaries you define.
+                    Centralized credentials. Resource limits. Autonomy toggles. The control you need.
+                  </p>
+
+                  <div className="grid md:grid-cols-2 gap-4">
+                    {[
+                      { title: "Container Isolation", desc: "Each agent in its own Docker environment" },
+                      { title: "Centralized Credentials", desc: "One place to manage all agent access" },
+                      { title: "Resource Limits", desc: "Control memory (1-64GB) and CPU (1-16 cores) per agent" },
+                      { title: "Autonomy Mode", desc: "Toggle autonomous operation on/off per agent" },
                     ].map((item, i) => (
                       <div key={i} className="flex items-start gap-2">
                         <CheckCircle className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
@@ -519,12 +514,12 @@ export default function HowItWorks() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { icon: GitBranch, title: "Workplan System", desc: "Task DAGs with dependencies, automatic injection, progress tracking" },
-              { icon: Lock, title: "Agent Permissions", desc: "Fine-grained control over inter-agent communication" },
-              { icon: BarChart3, title: "Custom Metrics", desc: "6 types: counter, gauge, percentage, status, duration, bytes" },
-              { icon: Activity, title: "Activity Replay", desc: "Full audit trail with timeline scrubbing" },
-              { icon: FileText, title: "File Browser", desc: "Browse and download agent workspace files" },
-              { icon: Clock, title: "Autonomous Scheduling", desc: "Cron-based execution, 24/7 agent operations" },
+              { icon: Terminal, title: "Web Terminal + SSH", desc: "Direct access to any agent via browser or time-limited SSH" },
+              { icon: Lock, title: "Centralized Credentials", desc: "One place to manage all agent secrets and API keys" },
+              { icon: Layers, title: "YAML Deployments", desc: "Deploy entire multi-agent systems with one manifest" },
+              { icon: Activity, title: "Replay Timeline", desc: "Scrub through history, see collaboration patterns" },
+              { icon: BarChart3, title: "Resource Control", desc: "Per-agent memory (1-64GB) and CPU (1-16 cores) limits" },
+              { icon: Clock, title: "Scheduling + Autonomy", desc: "Cron-based execution with autonomy mode toggles" },
             ].map((item, i) => (
               <div key={i} className="card group">
                 <div className="w-12 h-12 rounded-lg bg-primary-light flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
@@ -653,7 +648,7 @@ export default function HowItWorks() {
             Ready to Get Started?
           </h2>
           <p className="text-lg text-text-light mb-10">
-            Deploy production Deep Agent systems in 60 seconds.
+            Deploy autonomous agents on your infrastructure in minutes.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
