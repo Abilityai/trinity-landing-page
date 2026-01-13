@@ -224,7 +224,7 @@ export default function Home() {
             >
               <iframe
                 className="w-full h-full"
-                src="https://www.youtube.com/embed/tZ4TN9ySMBE"
+                src="https://www.youtube.com/embed/SWpNphnuPpQ"
                 title="Trinity Overview"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -326,9 +326,9 @@ export default function Home() {
               className="text-xl text-text-light leading-relaxed max-w-3xl mx-auto"
               variants={fadeInUp}
             >
-              Real-time dashboard shows what agents are doing and how they collaborate.
-              Replay timeline lets you scrub through history. Talk to any agent via web terminal.
-              Centralized credentials. Per-agent resource limits. Full audit trail.
+              Live execution streaming shows what agents are doing as they work. Real-time dashboard tracks collaboration.
+              Replay timeline lets you scrub through history. Stop any runaway execution instantly.
+              Web terminal access. Centralized credentials. Per-agent resource limits. Full audit trail.
             </motion.p>
           </motion.div>
         </div>

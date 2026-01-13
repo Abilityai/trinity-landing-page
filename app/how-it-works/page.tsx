@@ -89,9 +89,9 @@ export default function HowItWorks() {
               What is Trinity?
             </h2>
             <p className="text-lg text-text-light mb-8 leading-relaxed">
-              Trinity is sovereign infrastructure for autonomous AI agents. Deploy Claude Code agents in isolated
+              Trinity is sovereign infrastructure for autonomous AI agents. Deploy agents (Claude Code or Gemini CLI) in isolated
               Docker containers, let them discover and collaborate with each other via MCP, persist all state to
-              GitHub, and monitor everything through a real-time dashboard. Go from local agent to production
+              GitHub, and monitor everything through live execution streaming and a real-time dashboard. Go from local agent to production
               autonomous system in minutes.
             </p>
 
@@ -101,7 +101,7 @@ export default function HowItWorks() {
                 { icon: Container, text: "Isolated Docker container per agent" },
                 { icon: Network, text: "Agents discover and collaborate via MCP" },
                 { icon: Database, text: "State persists to GitHub - nothing lost" },
-                { icon: Eye, text: "Full observability with replay timeline" },
+                { icon: Eye, text: "Live execution streaming + replay timeline" },
                 { icon: Shield, text: "Your infrastructure, your roadmap" },
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3 p-4 bg-white rounded-lg border border-border">
@@ -209,15 +209,15 @@ export default function HowItWorks() {
                     <h3 className="text-xl font-bold text-secondary">Complete Observability</h3>
                   </div>
                   <p className="text-text-light mb-6">
-                    See everything agents are doing in real-time. Replay timeline lets you scrub through
+                    Watch agents work in real-time with live execution streaming. Replay timeline lets you scrub through
                     history. Know exactly what happened, when, and why.
                   </p>
 
                   <div className="grid md:grid-cols-2 gap-4">
                     {[
+                      { title: "Live Execution Streaming", desc: "Watch agents work in real-time as they execute tasks" },
                       { title: "Replay Timeline", desc: "Scrub through agent history with zoom controls" },
                       { title: "Live Dashboard", desc: "Real-time view of agent activity and collaboration" },
-                      { title: "File Browser", desc: "Browse and download agent workspace files" },
                       { title: "Execution Logs", desc: "Full transcript of every agent action" },
                     ].map((item, i) => (
                       <div key={i} className="flex items-start gap-2">
@@ -245,15 +245,15 @@ export default function HowItWorks() {
                   </div>
                   <p className="text-text-light mb-6">
                     Agents run in isolated containers with complete autonomy within boundaries you define.
-                    Centralized credentials. Resource limits. Autonomy toggles. The control you need.
+                    Stop any runaway execution instantly. Centralized credentials. Resource limits. Autonomy toggles.
                   </p>
 
                   <div className="grid md:grid-cols-2 gap-4">
                     {[
+                      { title: "Execution Termination", desc: "Stop any runaway agent mid-execution instantly" },
                       { title: "Container Isolation", desc: "Each agent in its own Docker environment" },
                       { title: "Centralized Credentials", desc: "One place to manage all agent access" },
                       { title: "Resource Limits", desc: "Control memory (1-64GB) and CPU (1-16 cores) per agent" },
-                      { title: "Autonomy Mode", desc: "Toggle autonomous operation on/off per agent" },
                     ].map((item, i) => (
                       <div key={i} className="flex items-start gap-2">
                         <CheckCircle className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
@@ -296,7 +296,7 @@ export default function HowItWorks() {
 │  │    WORKER     │ │    WORKER     │ │    WORKER     │ │   WORKER     │
 │  │   Agent A     │ │   Agent B     │ │   Agent C     │ │   Agent D    │
 │  │  (Content)    │ │  (Research)   │ │    (Code)     │ │  (Analysis)  │
-│  │ Claude Code   │ │ Claude Code   │ │ Claude Code   │ │ Claude Code  │
+│  │ Claude/Gemini │ │ Claude/Gemini │ │ Claude/Gemini │ │ Claude/Gemini│
 │  │  YOLO Mode    │ │  YOLO Mode    │ │  YOLO Mode    │ │  YOLO Mode   │
 │  └───────┬───────┘ └───────┬───────┘ └───────┬───────┘ └──────┬───────┘
 │          │                 │                 │                 │
@@ -515,10 +515,10 @@ export default function HowItWorks() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { icon: Terminal, title: "Web Terminal + SSH", desc: "Direct access to any agent via browser or time-limited SSH" },
+              { icon: Cpu, title: "Multi-Runtime", desc: "Claude Code or Gemini CLI per agent—no model lock-in" },
               { icon: Lock, title: "Centralized Credentials", desc: "One place to manage all agent secrets and API keys" },
               { icon: Layers, title: "YAML Deployments", desc: "Deploy entire multi-agent systems with one manifest" },
-              { icon: Activity, title: "Replay Timeline", desc: "Scrub through history, see collaboration patterns" },
-              { icon: BarChart3, title: "Resource Control", desc: "Per-agent memory (1-64GB) and CPU (1-16 cores) limits" },
+              { icon: Activity, title: "Live Streaming + Replay", desc: "Watch agents work live, scrub through history" },
               { icon: Clock, title: "Scheduling + Autonomy", desc: "Cron-based execution with autonomy mode toggles" },
             ].map((item, i) => (
               <div key={i} className="card group">
@@ -662,7 +662,7 @@ export default function HowItWorks() {
               View on GitHub
             </a>
             <a
-              href="https://youtu.be/tZ4TN9ySMBE"
+              href="https://youtu.be/SWpNphnuPpQ"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-secondary inline-flex items-center justify-center gap-2"
