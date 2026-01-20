@@ -43,10 +43,10 @@ export default function Home() {
   const heroScale = useTransform(scrollYProgress, [0, 0.5], [1, 0.95]);
 
   const pillars = [
-    { icon: Shield, title: "Sovereign", desc: "Your infrastructure, your data, your roadmap. No vendor lock-in." },
-    { icon: Zap, title: "Fast", desc: "Go from local agent to autonomous system in minutes, not months." },
-    { icon: Network, title: "Collaborative", desc: "Agents discover each other, delegate tasks, share results automatically." },
-    { icon: Database, title: "Persistent", desc: "Every state saved to GitHub. Roll back anytime. Nothing lost." }
+    { icon: Shield, title: "Sovereign", desc: "Your infrastructure, your security perimeter. Data never leaves. Full control over every agent." },
+    { icon: Network, title: "Process-Driven", desc: "Define workflows with approvals, branching, and notifications. Agents work within processes you control." },
+    { icon: Cpu, title: "Governed", desc: "Human approval gates before critical actions. Complete audit trail. Know who did what, when, and why." },
+    { icon: Brain, title: "Observable", desc: "Track costs per workflow. Real-time dashboards. Replay any execution. Enterprise-grade monitoring." }
   ];
 
   return (
@@ -129,7 +129,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
             >
-              Deploy collaborating agents on your infrastructure. Full observability. State that never dies. Minutes to production.
+              Enterprise-grade workflow orchestration on your infrastructure. Define processes. Require approvals. Track every action. Full audit trail.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -235,6 +235,141 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Platform Tour Section */}
+      <section className="py-20">
+        <div className="max-w-6xl mx-auto px-6">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={staggerContainer}
+          >
+            <motion.h2
+              className="text-3xl md:text-4xl font-bold text-secondary text-center mb-4"
+              variants={fadeInUp}
+            >
+              Platform Tour
+            </motion.h2>
+            <motion.p
+              className="text-text-light text-center mb-12 max-w-2xl mx-auto"
+              variants={fadeInUp}
+            >
+              A visual walkthrough of Trinity's key capabilities.
+            </motion.p>
+
+            <div className="space-y-16">
+              {/* Graph View */}
+              <motion.div
+                className="grid md:grid-cols-2 gap-8 items-center"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                <div className="order-2 md:order-1">
+                  <h3 className="text-2xl font-semibold text-secondary mb-3">Multi-Agent Orchestration</h3>
+                  <p className="text-text-light leading-relaxed">
+                    Visualize your entire agent ecosystem in real-time. The graph view shows how your system orchestrator coordinates specialized agents, with live status indicators, resource monitoring, and cost tracking at a glance.
+                  </p>
+                </div>
+                <motion.div
+                  className="order-1 md:order-2 rounded-xl overflow-hidden shadow-lg border border-gray-200"
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <img
+                    src="/screenshots/graph-view-collaboration.png"
+                    alt="Trinity Graph View showing multi-agent orchestration"
+                    className="w-full h-auto"
+                  />
+                </motion.div>
+              </motion.div>
+
+              {/* Process Editor */}
+              <motion.div
+                className="grid md:grid-cols-2 gap-8 items-center"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                <motion.div
+                  className="rounded-xl overflow-hidden shadow-lg border border-gray-200"
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <img
+                    src="/screenshots/process-editor.png"
+                    alt="Trinity Process Editor with YAML and visual flow"
+                    className="w-full h-auto"
+                  />
+                </motion.div>
+                <div>
+                  <h3 className="text-2xl font-semibold text-secondary mb-3">Declarative Workflow Editor</h3>
+                  <p className="text-text-light leading-relaxed">
+                    Define complex workflows with simple YAML. The split-pane editor shows your process definition alongside an auto-generated visual flow diagram. Add approval gates, error handling, retries, and parallel execution paths.
+                  </p>
+                </div>
+              </motion.div>
+
+              {/* Timeline View */}
+              <motion.div
+                className="grid md:grid-cols-2 gap-8 items-center"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                <div className="order-2 md:order-1">
+                  <h3 className="text-2xl font-semibold text-secondary mb-3">Timeline & Observability</h3>
+                  <p className="text-text-light leading-relaxed">
+                    Watch agents collaborate in real-time with the timeline view. See which agents are active, track task handoffs, and understand execution flow. Filter by event type, zoom in on specific time ranges, and replay any execution.
+                  </p>
+                </div>
+                <motion.div
+                  className="order-1 md:order-2 rounded-xl overflow-hidden shadow-lg border border-gray-200"
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <img
+                    src="/screenshots/timeline-collaboration-active.png"
+                    alt="Trinity Timeline showing agent collaboration"
+                    className="w-full h-auto"
+                  />
+                </motion.div>
+              </motion.div>
+
+              {/* Agent Terminal */}
+              <motion.div
+                className="grid md:grid-cols-2 gap-8 items-center"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                <motion.div
+                  className="rounded-xl overflow-hidden shadow-lg border border-gray-200"
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <img
+                    src="/screenshots/agent-terminal.png"
+                    alt="Trinity Agent Terminal with Claude Code"
+                    className="w-full h-auto"
+                  />
+                </motion.div>
+                <div>
+                  <h3 className="text-2xl font-semibold text-secondary mb-3">Built-in Agent Terminal</h3>
+                  <p className="text-text-light leading-relaxed">
+                    Connect directly to any running agent with the integrated terminal. Access Claude Code or bash, monitor resource usage, and interact with agents in real-time. Full terminal emulation with session persistence.
+                  </p>
+                </div>
+              </motion.div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Four Pillars Section */}
       <section className="py-20">
         <div className="max-w-6xl mx-auto px-6">
@@ -248,14 +383,14 @@ export default function Home() {
               className="text-3xl md:text-4xl font-bold text-secondary text-center mb-4"
               variants={fadeInUp}
             >
-              Why Sovereign Agent Infrastructure?
+              Why Enterprises Choose Sovereign Agent Infrastructure
             </motion.h2>
             <motion.p
               className="text-text-light text-center mb-12 max-w-2xl mx-auto"
               variants={fadeInUp}
             >
-              Stop waiting for SaaS vendors. Stop building from scratch.
-              Deploy intelligent, collaborating agents you fully control.
+              The security, governance, and control that production AI deployments require.
+              No vendor lock-in. No data leaving your perimeter.
             </motion.p>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -299,7 +434,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Observability Section */}
+      {/* Enterprise Controls Section */}
       <section className="py-20 bg-white/50 overflow-hidden">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div
@@ -314,21 +449,21 @@ export default function Home() {
               whileHover={{ rotate: 360 }}
               transition={{ duration: 0.8 }}
             >
-              <Brain className="w-8 h-8 text-primary" />
+              <Shield className="w-8 h-8 text-primary" />
             </motion.div>
             <motion.h2
               className="text-3xl md:text-4xl font-bold text-secondary mb-6"
               variants={fadeInUp}
             >
-              See Everything. Control Everything.
+              Built for Companies That Take AI Seriously
             </motion.h2>
             <motion.p
               className="text-xl text-text-light leading-relaxed max-w-3xl mx-auto"
               variants={fadeInUp}
             >
-              Live execution streaming shows what agents are doing as they work. Real-time dashboard tracks collaboration.
-              Replay timeline lets you scrub through history. Stop any runaway execution instantly.
-              Web terminal access. Centralized credentials. Per-agent resource limits. Full audit trail.
+              Complete audit trail of every agent action. Human approval gates where decisions matter.
+              Cost tracking per workflow. Resource limits per agent. Centralized credential management.
+              The controls enterprises require for autonomous AI in production.
             </motion.p>
           </motion.div>
         </div>
@@ -361,14 +496,20 @@ export default function Home() {
               className="text-3xl md:text-4xl font-bold text-secondary mb-6"
               variants={fadeInUp}
             >
-              Open Source. Deploy in Minutes.
+              Open Source Core. Enterprise Ready.
             </motion.h2>
             <motion.p
-              className="text-xl text-text-light leading-relaxed mb-10 max-w-3xl mx-auto"
+              className="text-xl text-text-light leading-relaxed mb-4 max-w-3xl mx-auto"
               variants={fadeInUp}
             >
               Trinity is free and open source. One command to deploy.
-              MCP server for agent collaboration. GitHub sync for state. Everything you need to run autonomous agents at scale.
+              Workflow orchestration, agent collaboration, state persistence, and audit trails included.
+            </motion.p>
+            <motion.p
+              className="text-lg text-text-light leading-relaxed mb-10 max-w-3xl mx-auto"
+              variants={fadeInUp}
+            >
+              Scale with enterprise features: SSO, RBAC, multi-node clustering, and priority support.
             </motion.p>
             <motion.a
               href="https://github.com/abilityai/trinity"
